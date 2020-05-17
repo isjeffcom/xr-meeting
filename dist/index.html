@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>XR-MEETING</title>
+        <meta lang="en"> 
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script src="./js/main.js" defer></script>
+        <script src="./js/self.js" defer></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <!--a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder-->
+
+            <!-- Plane and Sky -->
+            <a-plane position="0 0 -4" scale="6 6 6" rotation="-90 0 0" width="4" height="4" color="#333"></a-plane>
+            <a-sky color="#ECECEC"></a-sky>
+
+            <!-- Load Assets -->
+            <a-assets>
+                <a-asset-item id="desk" src="./assets/models/desk/scene.gltf"></a-asset-item>
+                <a-asset-item id="man" src="./assets/models/man/man.gltf"></a-asset-item>
+            </a-assets>
+
+            <!-- Add To Scene -->
+            <a-entity xr-meeting=""></a-entity>
+
+            <a-entity 
+                gltf-model="#desk" 
+                position="-2 0 -2">
+            </a-entity>
+
+            <a-entity 
+                id="self-man"
+                self-cont=""
+                gltf-model="#man" 
+                position="2 0 0"
+                rotation="0 0 0"
+                scale="0.01 0.01 0.01"
+                animation-mixer>
+            </a-entity>
+
+            <a-entity
+                id="camera"
+                camera 
+                look-controls 
+                wasd-controls="acceleration:100" 
+                position="0 6 0"
+                rotation="0 0 0">
+            </a-entity>
+
+        </a-scene>
+    </body>
+
+    <script>
+        
+
+
+    </script>
+</html>
