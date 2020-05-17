@@ -25,6 +25,16 @@ AFRAME.registerComponent('self-cont', {
 
             // Stop Animation
             this.el.setAttribute('animation-mixer', {timeScale: 1})
+
+            if(sioID){
+                socket.emit('to', {
+                    id: sioID, 
+                    x: this.el.object3D.position.x, 
+                    y: this.el.object3D.position.y, 
+                    z: this.el.object3D.position.z
+                })
+            }
+            
         }
 
 
