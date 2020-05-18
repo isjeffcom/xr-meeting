@@ -1,4 +1,4 @@
-const socket = io('http://emojiu.isjeff.com')
+const socket = io('https://emojiu.isjeff.com')
 let sioID
 let sioAll
 let sioName = "Player-" + parseInt(Math.random() * 10000)
