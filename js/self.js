@@ -2,7 +2,7 @@ var lastPosi = {x: 0}
 
 AFRAME.registerComponent('self-cont', {
     init: function () {
-        
+        this.el.object3D.position.set(0, 2, 0)
     },
 
     tick: function(){
@@ -43,4 +43,4 @@ AFRAME.registerComponent('self-cont', {
 
     }
     
-});
+})
