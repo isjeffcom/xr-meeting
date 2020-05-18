@@ -17,13 +17,6 @@ AFRAME.registerComponent('oplayer', {
 
         this.el.setAttribute('animation-mixer', {timeScale: 1})
     },
-<<<<<<< HEAD
-=======
-
-    tick: function(){
-
-        
->>>>>>> 756ad9811c37d3576836531d036deb281cdef321
 
     tick: function(){
 
