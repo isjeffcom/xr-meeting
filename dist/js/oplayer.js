@@ -1,12 +1,11 @@
 AFRAME.registerComponent('oplayer', {
     init: function () {
         this.el.object3D.position.set(0, 2, 0)
-    },
 
-    tick: function(){
-
-        socket.on('to', (data)=>{
+        socket.on('to_', (data)=>{
+            console.log("mm")
             if(data.id == this.el.getAttribute('id')){
+                
                 this.el.object3D.position.x = data.x
                 this.el.object3D.position.y = data.y
                 this.el.object3D.position.z = data.z
@@ -18,7 +17,11 @@ AFRAME.registerComponent('oplayer', {
         })
 
         this.el.setAttribute('animation-mixer', {timeScale: 1})
+    },
 
+    tick: function(){
+
+        
     }
     
 })
